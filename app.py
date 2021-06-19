@@ -12,7 +12,7 @@ def index():
 def classify():
     image = request.files['file']
     image.save(os.path.join("./uploads", secure_filename(image.filename)))
-    return jsonify({"response": "HI"})
+    return jsonify({"labels": "A", "values": 1 })
 
 if __name__ == "__main__":
     app.run(debug=True)
